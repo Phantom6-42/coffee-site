@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная — Кофейня</title>
+    <link rel="icon" href="images/test-internet-icon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><img src="images/test-internet-icon.jpg" alt="Логотип"> Название</div>
+        <button class="burger" id="burger">☰</button>
+        <nav class="nav" id="nav">
+            <a href="index.html" class="active">Главная</a>
+            <a href="menu.html">Меню</a>
+            <a href="partners.html">Партнеры</a>
+            <a href="contacts.html" class="btn-nav">Контакты</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ваше идеальное утро начинается здесь</h1>
+            <p>Свежая обжарка, домашняя выпечка и уютная атмосфера в самом центре города.</p>
+            <a href="menu.html" class="btn-main">Посмотреть меню</a>
+        </div>
+    </section>
+
+    <section class="story-section">
+        <div class="story-card">
+            <div class="story-img">
+                <img src="images/test.jpg" alt="Основатель заведения">
+            </div>
+            <div class="story-text">
+                <h2>Наша история</h2>
+                <p>Всё началось с простой идеи — создать место, где каждый сможет почувствовать себя как дома, но с идеальным кофе. Мы открылись в 2020 году, и с тех пор наша главная цель остается неизменной: радовать вас свежей выпечкой и напитками, приготовленными с душой.</p>
+                <p>Мы лично отбираем зерна, общаемся с фермерами и печем хлеб каждое утро. Для нас это не просто бизнес, это дело жизни.</p>
+                <div class="director-sign">
+                    Иван Иванов
+                    <span>Основатель и директор</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>Почему клиенты выбирают нас?</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="images/obzharka.jpg" alt="Своя обжарка" class="feature-img">
+                <h3>Своя обжарка</h3>
+                <p>Мы обжариваем зерна каждую неделю, чтобы вы пили самый свежий кофе.</p>
+            </div>
+            <div class="feature">
+                <img src="images/vipechka.jpg" alt="Свежая выпечка" class="feature-img">
+                <h3>Свежая выпечка</h3>
+                <p>Наши круассаны и синнабоны пекутся каждое утро прямо на вашей кухне.</p>
+            </div>
+            <div class="feature">
+                <img src="images/noutbook.jpg" alt="Место для работы" class="feature-img">
+                <h3>Место для работы</h3>
+                <p>Быстрый Wi-Fi, розетки у каждого стола и тихая атмосфера для фрилансеров.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Название вашего заведения. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav');
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

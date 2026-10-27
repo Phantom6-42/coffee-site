@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню — Кофейня</title>
+    <link rel="icon" href="images/test-internet-icon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><img src="images/test-internet-icon.jpg" alt="Логотип"> Название</div>
+        <button class="burger" id="burger">☰</button>
+        <nav class="nav" id="nav">
+            <a href="index.html">Главная</a>
+            <a href="menu.html" class="active">Меню</a>
+            <a href="partners.html">Партнеры</a>
+            <a href="contacts.html" class="btn-nav">Контакты</a>
+        </nav>
+    </header>
+
+    <section class="menu-section">
+        <h1 style="font-size: 42px;">Наше Меню</h1>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('bakery', this)">Выпечка</button>
+            <button class="tab-btn" onclick="openTab('desserts', this)">Десерты</button>
+            <button class="tab-btn" onclick="openTab('drinks', this)">Напитки</button>
+        </div>
+
+        <div id="bakery" class="menu-grid active">
+            <div class="menu-item">
+                <img src="images/kruasson.jpg" alt="Круассан">
+                <h3>Круассан классический</h3>
+                <p>Хрустящее французское тесто и сливочное масло.</p>
+                <span class="price">150 ₽</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/sinnabon.jpg" alt="Синнабон">
+                <h3>Синнабон с корицей</h3>
+                <p>Мягкая булочка с нежной глазурью и корицей.</p>
+                <span class="price">220 ₽</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/charlotka.jpg" alt="Шарлотка">
+                <h3>Шарлотка с яблоками</h3>
+                <p>Классический яблочный пирог с ароматной корицей.</p>
+                <span class="price">190 ₽</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/pirog_s_yaychom_i_lukom.jpg" alt="Пирог с яйцом и луком">
+                <h3>Пирог с яйцом и луком</h3>
+                <p>Сытная домашняя выпечка с начинкой из яиц и зеленого лука.</p>
+                <span class="price">180 ₽</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/Vatrushka.jpg" alt="Ватрушка">
+                <h3>Ватрушка с творогом</h3>
+                <p>Мягкая булочка с нежной творожной начинкой.</p>
+                <span class="price">120 ₽</span>
+            </div>
+        </div>
+
+        <div id="desserts" class="menu-grid">
+            <div class="menu-item">
+                <img src="images/maffin_choko.jpg" alt="Маффин">
+                <h3>Шоколадный маффин</h3>
+                <p>Влажный кекс с кусочками темного шоколада.</p>
+                <span class="price">180 ₽</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/donat-glazirovannyj-vanil.jpg" alt="Пончик с белой глазурью">
+                <h3>Пончик с белой глазурью</h3>
+                <p>Нежный пончик с ванильной глазурью и посыпкой.</p>
+                <span class="price">130 ₽</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/malin_donut.jpg" alt="Розовый пончик">
+                <h3>Пончик с малиной</h3>
+                <p>Воздушный пончик с розовой глазурью и начинкой.</p>
+                <span class="price">140 ₽</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/chocolate_donut.jpg" alt="Шоколадный пончик">
+                <h3>Шоколадный пончик</h3>
+                <p>Пышный пончик, щедро политый густой шоколадной глазурью.</p>
+                <span class="price">250 ₽</span>
+            </div>
+        </div>
+
+        <div id="drinks" class="menu-grid">
+            <div class="menu-item">
+                <img src="images/kapuchino.jpg" alt="Капучино">
+                <h3>Капучино</h3>
+                <p>Классический кофе с нежной молочной пенкой.</p>
+                <span class="price">250 ₽</span>
+            </div>
+            <div class="menu-item">
+                <img src="images/latte.jpg" alt="Латте">
+                <h3>Латте</h3>
+                <p>Мягкий вкус эспрессо с большим количеством молока.</p>
+                <span class="price">280 ₽</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Название вашего заведения. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav');
+        burger.addEventListener('click', () => { nav.classList.toggle('active'); });
+
+        function openTab(tabName, btnElement) {
+            let grids = document.getElementsByClassName("menu-grid");
+            for (let i = 0; i < grids.length; i++) grids[i].classList.remove("active");
+            let btns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < btns.length; i++) btns[i].classList.remove("active");
+            
+            document.getElementById(tabName).classList.add("active");
+            btnElement.classList.add("active");
+        }
+    </script>
+</body>
+</html>

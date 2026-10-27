@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Кофейня</title>
+    <link rel="icon" href="images/test-internet-icon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pattaya&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><img src="images/test-internet-icon.jpg" alt="Логотип"> Название</div>
+        <button class="burger" id="burger">☰</button>
+        <nav class="nav" id="nav">
+            <a href="index.html">Главная</a>
+            <a href="menu.html">Меню</a>
+            <a href="partners.html">Партнеры</a>
+            <a href="contacts.html" class="active btn-nav">Контакты</a>
+        </nav>
+    </header>
+
+    <section class="contacts-section">
+        <h1 style="text-align: center; margin-bottom: 30px; font-size: 36px;">Как нас найти и связаться</h1>
+        
+        <div class="contacts-container">
+            <div class="contact-info">
+                <h2>Наши контакты</h2>
+                <p><img src="images/adres.jpg" alt="Адрес" class="icon"> <span><strong>Адрес:</strong> г. Город, ул. Улица, д. 1</span></p>
+                <p><img src="images/clock.jpg" alt="Время работы" class="icon"> <span><strong>Режим работы:</strong> Пн-Вс с 09:00 до 21:00</span></p>
+                <p><img src="images/pochta.jpg" alt="Почта" class="icon"> <span><strong>Почта:</strong> info@example.com</span></p>
+                <p class="phone"><img src="images/phone.jpg" alt="Телефон" class="icon"> <span>8-888-888-88-88</span></p>
+            </div>
+
+            <div class="contact-departments">
+                <h2>Отделы компании</h2>
+                <div class="departments-grid">
+                    <div class="dept-item">
+                        <h4>Служба доставки</h4>
+                        <p><img src="images/phone.jpg" alt="Телефон" class="mini-icon"> <a href="tel:+78888888888">8-888-888-88-88</a></p>
+                        <p><img src="images/pochta.jpg" alt="Почта" class="mini-icon"> <a href="mailto:dostavka@example.com">dostavka@example.com</a></p>
+                    </div>
+                    <div class="dept-item">
+                        <h4>Корпоративным клиентам</h4>
+                        <p><img src="images/phone.jpg" alt="Телефон" class="mini-icon"> <a href="tel:+78888888888">8-888-888-88-88</a></p>
+                        <p><img src="images/pochta.jpg" alt="Почта" class="mini-icon"> <a href="mailto:corp@example.com">corp@example.com</a></p>
+                    </div>
+                    <div class="dept-item">
+                        <h4>Организованным группам</h4>
+                        <p><img src="images/phone.jpg" alt="Телефон" class="mini-icon"> <a href="tel:+78888888888">8-888-888-88-88</a></p>
+                        <p><img src="images/pochta.jpg" alt="Почта" class="mini-icon"> <a href="mailto:group@example.com">group@example.com</a></p>
+                    </div>
+                    <div class="dept-item">
+                        <h4>Отдел кадров</h4>
+                        <p><img src="images/phone.jpg" alt="Телефон" class="mini-icon"> <a href="tel:+78888888888">8-888-888-88-88</a></p>
+                        <p><img src="images/pochta.jpg" alt="Почта" class="mini-icon"> <a href="mailto:rabota@example.com">rabota@example.com</a></p>
+                    </div>
+                    <div class="dept-item">
+                        <h4>Контакты для прессы</h4>
+                        <p><img src="images/pochta.jpg" alt="Почта" class="mini-icon"> <a href="mailto:press@example.com">press@example.com</a></p>
+                    </div>
+                    <div class="dept-item">
+                        <h4>Выездное обслуживание</h4>
+                        <p><img src="images/pochta.jpg" alt="Почта" class="mini-icon"> <a href="mailto:event@example.com">event@example.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3244f7464f8f7631b186b41718e95dc93da8c1eafcf4f3c347b84368c31c6c37&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Название вашего заведения. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav');
+        burger.addEventListener('click', () => { nav.classList.toggle('active'); });
+    </script>
+</body>
+</html>
